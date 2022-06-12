@@ -70,7 +70,6 @@ namespace NoWayOut
             app.UseStaticFiles();
 
             app.UseRouting();
-
             app.UseAuthentication();
             app.UseAuthorization();
             context.Database.EnsureCreated();
