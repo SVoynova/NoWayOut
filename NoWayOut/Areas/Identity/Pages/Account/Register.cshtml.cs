@@ -56,7 +56,6 @@ namespace NoWayOut.Areas.Identity.Pages.Account
             [Display(Name = "Last name")]
             public string LastName { get; set; }
 
-
             [Required]
             [DataType(DataType.Text)]
             [Display(Name = "User Name")]

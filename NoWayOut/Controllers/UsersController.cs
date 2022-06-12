@@ -13,7 +13,6 @@ using NoWayOut.Models.ViewModels.Users;
 
 namespace NoWayOut.Controllers
 {
-    [Authorize(Roles = "Administrator")]
     public class UsersController : Controller
     {
         private UserManager<AppUser> _userManager;
@@ -34,6 +33,8 @@ namespace NoWayOut.Controllers
                     Id = item.Id,
                     UserName = item.UserName,
                     Email = item.Email,
+                    FirstName = item.FirstName,
+                    LastName = item.LastName,
                     Role = string.Join(
                         ", ", _userManager.GetRolesAsync(item).Result
                     )
@@ -51,6 +52,8 @@ namespace NoWayOut.Controllers
             {
                 Id = userData.Id,
                 UserName = userData.UserName,
+                FirstName = userData.FirstName,
+                LastName = userData.LastName,
                 Email = userData.Email,
                 Role = string.Join(
                         ", ", _userManager.GetRolesAsync(userData).Result)
@@ -158,6 +161,8 @@ namespace NoWayOut.Controllers
                 Id = userData.Id,
                 UserName = userData.UserName,
                 Email = userData.Email,
+                FirstName = userData.FirstName,
+                LastName = userData.LastName,
                 Role = string.Join(
                         ", ", _userManager.GetRolesAsync(userData).Result)
             };

@@ -1,4 +1,4 @@
-﻿@model IEnumerable<NoWayOut.Models.ViewModels.Users.AppUserViewModel>
+﻿@model NoWayOut.Models.ViewModels.Users.AppUserViewModel
 
 @{
     ViewData["Title"] = "Index";
@@ -34,21 +34,7 @@
 @foreach (var item in Model)
 {
         <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Id)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.FirstName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.LastName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.UserName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Email)
-            </td>
+            
             <td>
                 @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
                 @Html.ActionLink("Details", "Details", new { id=item.Id }) |
