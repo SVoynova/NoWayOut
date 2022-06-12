@@ -34,7 +34,7 @@ namespace NoWayOut.Controllers
                     Id = item.Id,
                     UserName = item.UserName,
                     Email = item.Email,
-                    Roles = string.Join(
+                    Role = string.Join(
                         ", ", _userManager.GetRolesAsync(item).Result
                     )
                 })
@@ -52,7 +52,7 @@ namespace NoWayOut.Controllers
                 Id = userData.Id,
                 UserName = userData.UserName,
                 Email = userData.Email,
-                Roles = string.Join(
+                Role = string.Join(
                         ", ", _userManager.GetRolesAsync(userData).Result)
             };
             return View(user);
@@ -158,7 +158,7 @@ namespace NoWayOut.Controllers
                 Id = userData.Id,
                 UserName = userData.UserName,
                 Email = userData.Email,
-                Roles = string.Join(
+                Role = string.Join(
                         ", ", _userManager.GetRolesAsync(userData).Result)
             };
             return View(user);
