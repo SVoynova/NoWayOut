@@ -16,7 +16,7 @@ namespace NoWayOut.Data
 
         private static void SeedRegularUser(UserManager<AppUser> userManager)
         {
-            if ((userManager.FindByNameAsync("regular").Result) != null)
+            if ((userManager.FindByNameAsync("client").Result) == null)
             {
                 var user = new AppUser()
                 {
@@ -37,7 +37,7 @@ namespace NoWayOut.Data
 
         private static void SeedAdmin(UserManager<AppUser> userManager)
         {
-            if ((userManager.FindByNameAsync("administrator").Result) != null)
+            if ((userManager.FindByNameAsync("administrator").Result) == null)
             {
                 var adminUser = new AppUser()
                 {
